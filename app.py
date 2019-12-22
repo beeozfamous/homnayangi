@@ -38,6 +38,36 @@ api = Api(app)
 
 jwt = JWT(app,authenicate,indentity)
 
+#-----------------------------------
+#--------------TEST-ONLY------------
+@app.route('/1', methods=['GET', 'POST'])
+def testlayout1():
+    error = None
+    return render_template('home.html', error=error)
+@app.route('/2', methods=['GET', 'POST'])
+def testlayout2():
+    error = None
+    return render_template('layout.html', error=error)
+@app.route('/3', methods=['GET', 'POST'])
+def testlayout3():
+    error = None
+    return render_template('login.html', error=error)
+@app.route('/4', methods=['GET', 'POST'])
+def testlayout4():
+    error = None
+    return render_template('personalpage.html', error=error)
+@app.route('/5', methods=['GET', 'POST'])
+def testlayout5():
+    error = None
+    return render_template('signup.html', error=error)
+@app.route('/6', methods=['GET', 'POST'])
+def testlayout7():
+    error = None
+    return render_template('writerecipe.html', error=error)
+
+#-----------------------------------
+
+
 @app.route('/viewlogin', methods=['GET', 'POST'])
 def viewlogin():
     error = None
