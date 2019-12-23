@@ -1,13 +1,17 @@
 import json
 
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect
 from flask_restful import Api
 from flask_jwt import JWT
 from flask_sqlalchemy import SQLAlchemy
 
+from source_backend.model.UserModel import UserModel
 from source_backend.security import authenicate, indentity
 from source_backend.resource.user import UserRegister,UserLogin
 from database_config import db
+
+import uuid
+from datetime import datetime
 
 
 MASTERNAME = "ptsang"
@@ -75,21 +79,45 @@ def viewlogin():
 
 
 
-@app.route('/login', methods=['GET', 'POST'])
+@app.route('/signin', methods=['GET', 'POST'])
 def login():
+    print(request.method)
+    if request.method == 'POST':
+        if request.form['signin']=='Đăng nhập':
+            user = UserModel.login_by_email_password(request.form['your_name'], request.form['your_pass'])
+            if user:
+                print(user.jsonify())
+                return redirect('/')
+            else:
+                return {'message': 'wrong username or password or invalid email'}
+    return render_template('login.html')
+@app.route('/signup', methods=['GET', 'POST'])
+def signup():
+    print(request.method)
+    if request.method == 'POST':
+        if request.form['signup'] == 'Đăng ký':
+            user = UserModel.find_by_email(request.form['email'])
+            if user:
+                return {'message': 'Email have already exist.'}
+            else:
+                print(request.form['name'])
+                print(request.form['email'])
+                print(request.form['pass'])
+                print(request.form['agree-term'])
+                print(request.form['re_pass'])
+                if(request.form['name'] and request.form['email'] and request.form['pass'] and request.form['agree-term']=='on' and request.form['pass']==request.form['re_pass']):
+                    user = UserModel(str(uuid.uuid1()), request.form['email'], request.form['pass'], 1,
+                                     request.form['name'], 1, datetime.now(), "https://upload.wikimedia.org/wikipedia/commons/5/56/Donald_Trump_official_portrait.jpg")
+                    user.add_n_update()
+                    return redirect('/signin')
+                else:
+                    return {'message':'missing something :)))))'}
 
-    _email = request.form['inputEmail']
-    _password = request.form['inputPassword']
-
-    if _email and _password:
-        return json.dumps({'html': '<span>All fields good !!</span>'})
-    else:
-        return json.dumps({'html': '<span>Enter the required fields</span>'})
+    return render_template('signup.html')
 
 @app.route('/', methods=['GET', 'POST'])
 def home():
-    error = None
-    return render_template('home.html', error=error)
+    return render_template('home.html')
 
 
 #api.add_resource(Item,'/item/<string:name>')
@@ -99,4 +127,4 @@ api.add_resource(UserLogin,'/userlogin')
 db.init_app(app)
 
 if __name__== '__main__':
-    app.run(port=5000,debug=True)
+    app.run(port=6969,debug=True)
