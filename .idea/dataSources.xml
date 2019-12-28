@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="postgres@homnayanlondatabase.cemjothahgv9.ap-southeast-1.rds.amazonaws.com" uuid="8a48ae49-4eaa-4778-ab48-5fef912805b4">
+    <data-source source="LOCAL" name="hnag" uuid="0eca5918-1640-4872-9fde-56eb6faa685b">
       <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
-      <jdbc-url>jdbc:postgresql://homnayanlondatabase.cemjothahgv9.ap-southeast-1.rds.amazonaws.com:5432/postgres</jdbc-url>
+      <jdbc-url>jdbc:postgresql://homnayangidb.cemjothahgv9.ap-southeast-1.rds.amazonaws.com:5432/postgres</jdbc-url>
     </data-source>
   </component>
 </project>

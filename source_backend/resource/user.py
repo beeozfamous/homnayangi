@@ -1,5 +1,7 @@
 import uuid
 from datetime import datetime
+
+import bcrypt
 from flask_restful import reqparse,Resource
 from source_backend.model.UserModel import UserModel
 
@@ -19,7 +21,7 @@ class UserRegister(Resource):
         if UserModel.find_by_email(str(data['email'])):
             return {'message': 'Email have already exist.',
                     'user': str(str(data['email']))}, 404
-        user = UserModel(str(uuid.uuid1()),data['email'],data['password'],int(data['role_id']),data['fullname'],bool(data['gender_id']),datetime.now(),data['avatar_link'])
+        user = UserModel(str(uuid.uuid1()),data['email'],(bcrypt.hashpw(data['password'].encode('utf-8'), bcrypt.gensalt())).decode('utf-8'),int(data['role_id']),data['fullname'],bool(data['gender_id']),datetime.now(),data['avatar_link'],True)
         user.add_n_update()
         return{'message':'Create user successfully.'},201
 
@@ -31,8 +33,8 @@ class UserLogin(Resource):
 
     def post(self):
         data = UserLogin.parser.parse_args()
-        user = UserModel.login_by_email_password(data['email'],data['password'])
-        if user:
+        user = UserModel.find_by_email(data['email'])
+        if user.check_user_password(data['password']):
             return user.jsonify()
         else:
             return {'message':'wrong username or password or invalid email'}

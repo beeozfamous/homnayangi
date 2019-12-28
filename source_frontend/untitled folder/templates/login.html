@@ -1,0 +1,66 @@
+{% extends "login.html" %}
+
+{% block content %}
+    <section class="sign-in">
+            <div class="container">
+                <div class="signin-content">
+                    <div class="signin-image">
+                        <a href="/"><img src="../static/img/signIn.jpg" alt="sing up image"></a>
+                        <a href="/signup" class="signup-image-link">Bạn chưa có tài khoản?</a>
+                    </div>
+
+                    <div class="signin-form">
+                        <h2 class="form-title">Đăng nhập</h2>
+                        <form method="POST" class="register-form" id="login-form" novalidate>
+                            <div class="form-group">
+                                {{ form.username.label(for="username") }}
+                                {% if form.username.errors %}
+                                    <span class="btn-show-pass" style="color: red;">
+                                        {% for error in form.username.errors %}
+                                        <span class="err" >[{{ error }}]</span>
+                                        {% endfor %}
+                                    </span>
+                                {% endif %}
+                                {{ form.username(id="your_name", placeholder="Tài khoản") }}
+<!--                                <label for="your_name"><i class="zmdi zmdi-account material-icons-name"></i></label>-->
+<!--                                <input type="text" name="your_name" id="your_name" placeholder="Tài khoản"/>-->
+                            </div>
+                            <div class="form-group">
+                                {{ form.password.label(for="password") }}
+<!--                                <label for="your_pass"><i class="zmdi zmdi-lock"></i></label>-->
+                                <span class="btn-show-pass">
+                                    {% if form.password.errors %}
+                                        {% for error in form.password.errors %}
+                                        <span class="err" style="color: red;">[{{ error }}]</span>
+                                        {% endfor %}
+                                    {% else %}
+							            <i class="zmdi zmdi-eye"></i>
+                                    {% endif %}
+						        </span>
+                                {{ form.password(id="your_pass", placeholder="Mật khẩu") }}
+<!--                                <input type="password" name="your_pass" id="your_pass" placeholder="Mật khẩu"/>-->
+                            </div>
+                            <div class="form-group">
+                                {{ form.remember_me(id="remember-me", class="agree-term") }}
+<!--                                <input type="checkbox" name="remember-me" id="remember-me" class="agree-term" />-->
+                                {{ form.remember_me.label(class="label-agree-term") }}
+<!--                                <label for="remember-me" class="label-agree-term"><span></span>Ghi nhớ đăng nhập</label>-->
+                            </div>
+                            <div class="form-btn form-group">
+                                {{form.submit(id="signin", class="form-submit btn")}}
+<!--                                <input type="submit" name="signin" id="signin" class="form-submit btn" value="Đăng nhập"/>-->
+                            </div>
+                        </form>
+                        <div class="social-login">
+                            <span class="social-label">Đăng nhập với</span>
+                            <ul class="socials">
+                                <li><a href="#"><i class="display-flex-center zmdi zmdi-facebook"></i></a></li>
+                                <li><a href="#"><i class="display-flex-center zmdi zmdi-twitter"></i></a></li>
+                                <li><a href="#"><i class="display-flex-center zmdi zmdi-google"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+{% endblock %}

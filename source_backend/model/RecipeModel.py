@@ -7,7 +7,7 @@ class RecipeModel(db.Model):
     foodname = db.Column(db.VARCHAR(50),nullable=False)
     description = db.Column(db.TEXT,nullable=False)
     ingredients = db.Column(db.TEXT,nullable=False)
-    image = db.Column(db.TEXT,nullable=False)
+    image = db.Column(db.VARCHAR(100),nullable=False)
     def __init__(self,postid,ownerid,foodname,description,ingredients,image):
         self.postid = postid
         self.ownerid = ownerid
@@ -27,8 +27,10 @@ class RecipeModel(db.Model):
     def find_by_name(cls,foodname):
         return RecipeModel.query.filter_by(foodname=foodname).first()
     def add_n_update(self):
+
         db.session.add(self)
         db.session.commit()
     def delete(self):
         db.session.delete(self)
         db.session.commit()
+

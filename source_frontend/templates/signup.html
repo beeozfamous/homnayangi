@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE httml lang="en">
 <head>
 	<title>Sign in</title>
 	<meta charset="UTF-8">
@@ -34,8 +33,38 @@
                                 <input type="password" name="pass" id="pass" placeholder="Mật khẩu"/>
                             </div>
                             <div class="form-group">
-                                <label for="re-pass"><i class="zmdi zmdi-lock-outline"></i></label>
+                                <label for="re_pass"><i class="zmdi zmdi-lock-outline"></i></label>
                                 <input type="password" name="re_pass" id="re_pass" placeholder="Xác nhận lại mật khẩu"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="agree-term" class="label-agree-term"><span><span></span></span>
+                                    Ngày sinh: </label>
+                            </div>
+                             <div class="form-group">
+                                 <label for="dob"><i class="zmdi zmdi-lock-outline"></i></label>
+                                 <input type="date" name="dob" id="dob" value="">
+                             </div>
+
+                             <div class="form-group">
+                              <div class="clearfix">
+                            <div class="left">
+                            <div class="radio">
+                            <input type="radio" value="m" name='gender' id='male' />
+                            <label for="male"></label>
+                            </div>
+                            </div>
+                            <div class="right">Male</div>
+                            </div>
+
+                            <div class="clearfix">
+                            <div class="left">
+                            <div class="radio">
+                            <input type="radio" value="f" name='gender' id='female' />
+                            <label for="female"></label>
+                            </div>
+                            </div>
+                            <div class="right">Female</div>
+                            </div>
                             </div>
                             <div class="form-group">
                                 <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" />
