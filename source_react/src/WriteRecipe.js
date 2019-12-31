@@ -95,6 +95,7 @@ class WriteRecipe extends React.Component {
     handleStepRemove = (idx) => () => {
 
         this.setState({ steps: this.state.steps.filter((s, sidx) => idx !== sidx) });
+
     }
 
     buildFileSelector() {
@@ -105,14 +106,17 @@ class WriteRecipe extends React.Component {
     }
 
     handleSubmitPost=()=>{
-        console.log(this.state)
+
         let formData = new FormData();
+        var resultStep = this.state.steps.map(function(a) {return a.name;});
+        var resultIng = this.state.ingredients.map(function(a) {return a.name;});
+
 
         formData.append('owner_id', this.state.owner_id);
         formData.append('foodname',this.state.foodname);
         formData.append('image',this.state.file);
-        formData.append('description',JSON.stringify(this.state.steps));
-        formData.append('ingredients',JSON.stringify(this.state.ingredients));
+        formData.append('description',JSON.stringify(resultStep));
+        formData.append('ingredients',JSON.stringify(resultIng));
 
         fetch("http://127.0.0.1:6969/addRecipe",
 {

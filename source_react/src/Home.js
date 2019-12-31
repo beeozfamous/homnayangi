@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Masonry from 'react-masonry-infinite';
 import shortid from 'shortid';
 import './App.css';
+import data from './data/data.json'
 
 class Home extends Component {
   constructor(props) {
@@ -13,18 +14,22 @@ class Home extends Component {
     };
   }
 
-  images = [require('./img/ct.jpg'), require('./img/gk.jpg'), require('./img/pz.jpg'), require('./img/bx.jpg'), require('./img/bb.jpg')];
+  // images = [require('./img/ct.jpg'), require('./img/gk.jpg'), require('./img/pz.jpg'), require('./img/bx.jpg'), require('./img/bb.jpg'), 'https://upload.wikimedia.org/wikipedia/commons/0/0a/OffHN_10_2008_1.jpg?fbclid=IwAR0yHttwqz_jilTzFJjWLQxNvUJvZzfnKevm6IsgDcMMAC6gR2rzKPNweWk'];
 
-  getRandomElement = array => array[Math.floor(Math.random() * array.length)];
+  // getRandomElement = array => array[Math.floor(Math.random() * array.length)];
 
-  generateElements = () => [...Array(10).keys()].map(() => {
+  generateElements = () => [...Array(10).keys()].map((item, index) => {
     const newImg = new Image()
     newImg.onload = () => {
     }
-    newImg.src = this.getRandomElement(this.images)
+    const imgs = data.map(item => item.img)
+    console.log(data[index])
+    newImg.src = imgs[index][0]
     return {
       key: shortid.generate(),
       img: newImg,
+      username: data[index].username,
+      content: data[index].name
     };
   });
 
@@ -45,7 +50,7 @@ class Home extends Component {
   })), 2500);
 
   render() {
-    console.log(this.state.elements)
+    console.log(this.state.elements[0].img.src)
     return (
       <div>
         <div className="container">
@@ -63,20 +68,20 @@ class Home extends Component {
             loadMore={this.loadMore}
           >
             {
-              this.state.elements.map(({ key, img }) =>
-                <div key={key} className="post" style={{ height: `${img.height / img.width * 456.14 + 122}` }}>
-                  <h2>Username</h2>
-                  <img className="post-img" src={img.src} alt="" />
+              this.state.elements.map(item => (
+                <div key={item.key} className="post" style={{ height: `${item.img.height / item.img.width * 456.14 + 122}` }}>
+                  <h2>{item.username}</h2>
+                  <img className="post-img" src={item.img.src} alt="" />
                   <div className="post-body">
                     <ul className="post-react flex flex-wrap align-items-center">
                       <li><i className="fa fa-heart-o fa-3x"></i></li>
                       <li><i className="fa fa-comments-o fa-3x"></i></li>
                       <li><i className="fa fa-share-alt fa-3x"></i></li>
                     </ul>
-                    <h1 className="post-content">Content</h1>
+                    <h1 className="post-content">{item.content}</h1>
                   </div>
                 </div>
-              )
+              ))
             }
           </Masonry>) : null}
         </div>

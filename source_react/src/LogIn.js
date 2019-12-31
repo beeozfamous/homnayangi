@@ -75,7 +75,7 @@ console.log(this.state.loginData)
             <div className="container_login">
                 <div className="signin-content">
                     <div className="signin-image">
-                        <img src={require("./img/login.jpg")} alt="sign up image" />
+                        <img src='https://hnag.s3-ap-southeast-1.amazonaws.com/FoodImage/7a0dd01c-298f-11ea-bc42-3c15c2d9b720.jpg' alt="sign up image" />
                         <p className="signup-question">Bạn chưa có tài khoản?</p>
                         <a href="/signup" className="signup-image-link">Đăng kí tài khoản mới</a>
                         <a href="/" className="signup-image-link">Tiếp tục sử dụng ẩn danh</a>
