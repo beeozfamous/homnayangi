@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Home from './Home'
 import SearchResult from './searchResult'
 import WriteRecipe from './WriteRecipe';
+import LogIn from './User';
 import Nav from './Nav';
 
 class Layout extends Component {
@@ -25,6 +26,7 @@ class Layout extends Component {
             <Route path="/" exact render={() => <Home keyword={this.state.keyword} />} />
             <Route path="/searchresults" exact render={() => <SearchResult keyword={this.state.keyword} />} />
             <Route path="/writerecipe" component={WriteRecipe} />
+            <Route path="/user" component={LogIn} />
           </Switch>
       </div>
     )

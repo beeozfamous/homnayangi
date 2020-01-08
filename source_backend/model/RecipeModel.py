@@ -17,6 +17,7 @@ class RecipeModel(db.Model):
         self.image = image
 
     def jsonify(self):
+
         return {'post_id':self.postid,
                 'owner_id':self.ownerid,
                 'food_name':self.foodname,
@@ -33,4 +34,5 @@ class RecipeModel(db.Model):
     def delete(self):
         db.session.delete(self)
         db.session.commit()
+
 

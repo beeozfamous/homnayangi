@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import  { Redirect } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 import './App.css';
 
@@ -19,7 +18,7 @@ class Nav extends React.Component {
   onClick = (e) => {
     e.preventDefault();
     this.props.handleSearch(this.state.keyword);
-    window.location.href="/searchresults";
+    // window.location.href="/searchresults";
   }
 
   render() {

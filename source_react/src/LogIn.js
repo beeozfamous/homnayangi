@@ -46,7 +46,7 @@ formData.append('password',this.state.password);
   //   options.body.append("email","kienBTX@gmail.com");
   //   options.body.append("password","123456");
   //   console.log(options);
-fetch("http://nguyenbm.tk:5000/login",
+fetch("http://0.0.0.0:5000/login",
 {
     headers: {
         "access-control-allow-origin" : "*"},
@@ -60,13 +60,15 @@ fetch("http://nguyenbm.tk:5000/login",
       this.setState({
         loginData:json
       });
+            alert(json.message);
+
     });
 console.log(this.state.loginData)
 };
 
     render() {
         const isLoggedIn = this.state.loginData;
-            if (isLoggedIn!=="" ) {
+            if (isLoggedIn.userid) {
                     console.log("iamhere")
                     return <Redirect to="/"/>;
     } else {

@@ -10,6 +10,10 @@ from flask_jwt import jwt_required
 from source_backend.model.RecipeModel import RecipeModel
 from source_backend.model.UserModel import UserModel
 
+from database_config import db,SQLALCHEMY_DATABASE_URI
+from sqlalchemy import create_engine
+
+
 UPLOAD_FOLDER = "FoodImage"
 BUCKET = "hnag"
 
@@ -78,10 +82,7 @@ class Recipe(Resource):
         else:
             pass
         return {'message':'do not thing'}
-
 class RecipeList(Resource):
     def get(self):
         return{'recipes':[recipe.jsonify() for recipe in RecipeModel.query.all() ]}
-        # foodDetail = RecipeModel.query.join(UserModel,RecipeModel.ownerid==UserModel.userid).add_columns(RecipeModel.ownerid,UserModel.fullname).filter(RecipeModel.ownerid==UserModel.userid)
-        # print([jsonify(recipe) for recipe in foodDetail])
-        #return {'recipes':[dict((recipe)) for recipe in foodDetail]}
+      
