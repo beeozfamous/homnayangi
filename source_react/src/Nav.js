@@ -1,15 +1,36 @@
 import React, { Component } from 'react';
+import  { Redirect } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 import './App.css';
 
-function Nav() {
+class Nav extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      keyword: '',
+    }
+    this.handleSearch = this.handleSearch.bind(this);
+  }
+
+  handleSearch(event) {
+    this.setState({keyword: event.target.value})
+  }
+
+  onClick = (e) => {
+    e.preventDefault();
+    this.props.handleSearch(this.state.keyword);
+    window.location.href="/searchresults";
+  }
+
+  render() {
+    const {keyword} = this.state;
     return (
         <div>
             <div className="header">
                 <Link to="/"><img className="header__logo" src={require("./img/full_logo.png")} alt="" /></Link>
                 <form className="search">
-                    <input type="text" className="search__field" placeholder="Tìm kiếm món ăn, nguyên liệu,..." />
-                    <button className="btn search__btn"><i className="fa fa-search"></i>Tìm Kiếm</button>
+                    <input type="text" className="search__field" placeholder="Tìm kiếm món ăn, nguyên liệu,..." onChange={this.handleSearch} value={keyword}/>
+                    <button className="btn search__btn" onClick={this.onClick}><i className="fa fa-search"></i>Tìm Kiếm</button>
                 </form>
                 <div className="icons__bar">
                     <ul className="icons flex flex-wrap align-items-center">
@@ -23,6 +44,7 @@ function Nav() {
                 className="fa fa-pencil-square-o"></i></button></Link>
         </div>
     )
+  }
 }
 
 class ScrollButton extends React.Component {

@@ -2,12 +2,13 @@ import React, { Component } from 'react';
 import Masonry from 'react-masonry-infinite';
 import shortid from 'shortid';
 import './App.css';
+import searchData from './data/data.json'
 
 class Popup extends React.Component {
   render() {
     return (
-      <div className='popup' >
-        <div className='popup_inner' >
+      <div className='popup'>
+        <div className='popup_inner'>
           <div className="row">
             <img className="col" src={this.props.img.src}></img>
             <div className="col detail scroll-bar">
@@ -34,7 +35,7 @@ class Popup extends React.Component {
   }
 }
 
-class Home extends Component {
+class SearchResults extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -44,49 +45,73 @@ class Home extends Component {
       showPopUp: false,
       dataPopUp: {},
       isLiked: false,
-      i: 0,
-      searchResults: [],
-      listData:[],
+      searchResults: []
     };
   }
+//   generateElements = (keyword) => [...Array(10).keys()].map((item, index) => {
+//     this.setState.searchResults = data.filter(item => this.searchFor(keyword, item))
+//     const newImg = new Image()
+//     const imgs = this.state.searchResults.map(item => item.img)
+//     newImg.src = imgs[index][0]
+//     return {
+//       key: shortid.generate(),
+//       img: newImg,
+//       username: this.state.searchResults[index].username,
+//       name: this.state.searchResults[index].name,
+//       ingredients: this.state.searchResults[index].ingredients,
+//       steps: this.state.searchResults[index].steps,
+//       isLiked: false,
+//     };
+//   });
 
-generateElements = (i,listData) => listData.slice(i * 10, i * 10 + 10).map((item, index) => {
-  const newImg = new Image();
-    newImg.src = item.image;
+//   componentWillMount(keyword) {
+//     this.setState(state => ({
+//       elements: state.elements.concat(this.generateElements(keyword))
+//     }))
+//   }
+
+//   componentDidMount() {
+//     this.setState(state => ({
+//       searchResults: state.elements
+//     }))
+//   }
+
+//   componentWillUnmount = () => {
+//     this.setState({
+//       elements: []
+//     })
+//   }
+
+//   loadMore = (keyword) => setTimeout(() => this.setState(state => ({
+//     elements: state.elements.concat(this.generateElements(keyword)),
+//   })), 2500);
+
+  generateElements = () => [...Array(10).keys()].map((item, index) => {
+    console.log();
+    const newImg = new Image()
+    const imgs = searchData.map(item => item.img)
+    newImg.src = imgs[index][0]
     return {
       key: shortid.generate(),
       img: newImg,
-      username: item.owner_id,
-      name: item.food_name,
-      ingredients: item.ingredients.split(","),
-      steps: item.description.split(","),
+      username: searchData[index].username,
+      name: searchData[index].name,
+      ingredients: searchData[index].ingredients,
+      steps: searchData[index].steps,
       isLiked: false,
     };
   });
 
-  componentDidMount() {
-        this.setState(state => ({
-      searchResults: state.elements
+  componentWillMount() {
+    this.setState(state => ({
+      elements: state.elements.concat(this.generateElements())
     }))
-
   }
 
-  componentWillMount() {
-  fetch('http://nguyenbm.tk:5000/listRecipe')
-    .then(response => response.json())
-    .then((json) => {
-      this.setState({
-        listData:json.recipes
-      });
-       this.setState(state => ({
-      elements: state.elements.concat(this.generateElements(0,json.recipes))
-    }));
-
-
-    })
-    .catch(error => console.log('Error:', error));
-          console.log(this.state.element)
-
+  componentDidMount() {
+    this.setState(state => ({
+      searchResults: state.elements
+    }))
   }
 
   componentWillUnmount = () => {
@@ -95,25 +120,9 @@ generateElements = (i,listData) => listData.slice(i * 10, i * 10 + 10).map((item
     })
   }
 
-  loadMore = () => {
-    const element = this.generateElements(this.state.i + 1,this.state.listData);
-        console.log(this.state.element)
-        console.log(this.state.i)
-    if (element.length >= 0) {
-      setTimeout(() => {
-        this.setState(state => ({
-          elements: state.elements.concat(element),
-          i: state.i + 1,
-        }))
-      }, 2500);
-    }
-    else {
-      this.setState({
-        hasMore: false
-      })
-    }
-  }
-
+  loadMore = () => setTimeout(() => this.setState(state => ({
+    elements: state.elements.concat(this.generateElements()),
+  })), 2500);
 
   clickLike = (key) => {
     this.setState({
@@ -148,23 +157,22 @@ generateElements = (i,listData) => listData.slice(i * 10, i * 10 + 10).map((item
     return this.change_alias(item.name).toLowerCase().includes(this.change_alias(keyword).toLowerCase());
   }
 
-  componentWillReceiveProps({ keyword }) {
+  componentWillReceiveProps({keyword}) {
     this.setState({
-      searchResults: keyword === '' ? this.state.elements : this.state.elements.filter(item => this.searchFor(keyword, item) === true)
+      searchResults : keyword === '' ? this.state.elements : this.state.elements.filter(item => this.searchFor(keyword, item) === true)
     })
   }
 
-   render() {
+  render() {
     // console.log(this.state.elements)
-    // const { keyword } = this.props
-    // console.log(keyword)
+      // const { keyword } = this.props
+      // console.log(keyword)
 
     // const searchResults = keyword === '' ? this.state.elements : this.state.elements.filter(item => this.searchFor(keyword, item) === true)
 
-    // const { searchResults } = this.state
+    const {searchResults} = this.state
     // console.log('searchResults', searchResults)
     return (
-
       <div>
         <div className="container">
           {this.state.elements ? (<Masonry
@@ -214,4 +222,4 @@ generateElements = (i,listData) => listData.slice(i * 10, i * 10 + 10).map((item
   }
 }
 
-export default Home;
+export default SearchResults;

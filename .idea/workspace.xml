@@ -2,23 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ef3afad7-02c3-4021-9514-d3a02fa71bd0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/source_react/src/searchResult.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/0eca5918-1640-4872-9fde-56eb6faa685b.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/0eca5918-1640-4872-9fde-56eb6faa685b.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/0eca5918-1640-4872-9fde-56eb6faa685b/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/0eca5918-1640-4872-9fde-56eb6faa685b/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source_backend/resource/recipe.py" beforeDir="false" afterPath="$PROJECT_DIR$/source_backend/resource/recipe.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source_react/node_modules/cors/CONTRIBUTING.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source_react/node_modules/cors/HISTORY.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source_react/node_modules/cors/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source_react/node_modules/cors/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source_react/node_modules/cors/lib/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source_react/node_modules/cors/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/source_react/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/source_react/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source_react/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/source_react/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source_react/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/source_react/public/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source_react/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/source_react/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source_react/src/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/source_react/src/Home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source_react/src/SignUp.js" beforeDir="false" afterPath="$PROJECT_DIR$/source_react/src/SignUp.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source_react/src/WriteRecipe.js" beforeDir="false" afterPath="$PROJECT_DIR$/source_react/src/WriteRecipe.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source_react/src/Layout.js" beforeDir="false" afterPath="$PROJECT_DIR$/source_react/src/Layout.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source_react/src/Nav.js" beforeDir="false" afterPath="$PROJECT_DIR$/source_react/src/Nav.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -112,10 +104,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/source_backend/resource/recipe.py">
+        <entry file="file://$PROJECT_DIR$/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="376">
-              <caret line="69" column="19" selection-start-line="69" selection-start-column="19" selection-end-line="69" selection-end-column="19" />
+            <state relative-caret-position="648">
+              <caret line="54" column="36" selection-start-line="54" selection-start-column="36" selection-end-line="54" selection-end-column="36" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -123,11 +115,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/source_react/src/WriteRecipe.js">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/source_react/src/Home.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="475">
-              <caret line="138" column="5" selection-start-line="138" selection-start-column="5" selection-end-line="138" selection-end-column="5" />
+            <state relative-caret-position="408">
+              <caret line="104" column="33" selection-start-line="104" selection-start-column="33" selection-end-line="104" selection-end-column="33" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -136,7 +128,7 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="das://0eca5918-1640-4872-9fde-56eb6faa685b/database/postgres/schema/public/table/recipe_posts">
+        <entry file="das://0eca5918-1640-4872-9fde-56eb6faa685b/database/postgres/schema/public/table/users">
           <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
             <state projectRestartId="1fcd7bf2-10ed-45d9-9845-9fd70fa4c9b7">
               <filtering>
@@ -146,13 +138,17 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/source_react/src/Home.js">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/homnayangi.ini">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/database_config.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="277">
-              <caret line="123" column="12" selection-start-line="123" selection-start-column="12" selection-end-line="123" selection-end-column="12" />
+            <state>
               <folding>
-                <element signature="e#0#41#0" expanded="true" />
+                <element signature="e#0#23#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -162,7 +158,43 @@
         <entry file="file://$PROJECT_DIR$/source_react/src/App.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="628">
-              <caret line="627" selection-start-line="627" selection-end-line="627" />
+              <caret line="643" column="1" selection-start-line="643" selection-start-column="1" selection-end-line="643" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/source_react/src/Layout.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="396">
+              <caret line="33" column="22" selection-start-line="33" selection-start-column="22" selection-end-line="33" selection-end-column="22" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/source_react/src/searchResult.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="324">
+              <caret line="27" column="21" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="21" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/source_react/src/Nav.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1044">
+              <caret line="87" column="19" selection-start-line="87" selection-start-column="19" selection-end-line="87" selection-end-column="19" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -170,36 +202,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/source_react/public/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="34" column="35" lean-forward="true" selection-start-line="34" selection-start-column="35" selection-end-line="34" selection-end-column="35" />
+            <state relative-caret-position="348">
+              <caret line="29" column="33" selection-start-line="29" selection-start-column="33" selection-end-line="29" selection-end-column="33" />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/source_backend/model/UserModel.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="468">
-              <caret line="39" column="16" selection-start-line="39" selection-start-column="16" selection-end-line="39" selection-end-column="16" />
-              <folding>
-                <element signature="e#0#13#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/source_react/src/data/data.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="7" column="118" selection-start-line="7" selection-start-column="118" selection-end-line="7" selection-end-column="118" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/source_react/src/data/data1.json">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -224,7 +230,10 @@
       <find>conso</find>
       <find>]&quot;</find>
       <find>data.</find>
+      <find>searchData</find>
       <find>console.log(</find>
+      <find>elements</find>
+      <find>generateElements</find>
     </findStrings>
     <replaceStrings>
       <replace>]</replace>
@@ -260,14 +269,16 @@
         <option value="$PROJECT_DIR$/source_react/src/Log.css" />
         <option value="$PROJECT_DIR$/app.py" />
         <option value="$PROJECT_DIR$/source_backend/resource/user.py" />
-        <option value="$PROJECT_DIR$/source_react/src/Layout.js" />
         <option value="$PROJECT_DIR$/source_react/src/LogIn.js" />
         <option value="$PROJECT_DIR$/source_backend/resource/recipe.py" />
-        <option value="$PROJECT_DIR$/source_react/src/App.css" />
-        <option value="$PROJECT_DIR$/source_react/public/index.html" />
         <option value="$PROJECT_DIR$/source_react/src/data/data.json" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
         <option value="$PROJECT_DIR$/source_react/src/WriteRecipe.js" />
+        <option value="$PROJECT_DIR$/source_react/src/App.css" />
+        <option value="$PROJECT_DIR$/source_react/src/Layout.js" />
+        <option value="$PROJECT_DIR$/source_react/src/Nav.js" />
+        <option value="$PROJECT_DIR$/source_react/public/index.html" />
+        <option value="$PROJECT_DIR$/source_react/src/searchResult.js" />
         <option value="$PROJECT_DIR$/source_react/src/Home.js" />
       </list>
     </option>
@@ -295,28 +306,6 @@
             <path>
               <item name="HomNayAnGi" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="~/Developer/Python_Develop/SEP/HomNayAnGi" type="442cc68d:ScopeViewTreeModel$RootNode" />
-            </path>
-            <path>
-              <item name="HomNayAnGi" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="~/Developer/Python_Develop/SEP/HomNayAnGi" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="source_backend" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="HomNayAnGi" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="~/Developer/Python_Develop/SEP/HomNayAnGi" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="source_backend" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="model" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="HomNayAnGi" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="~/Developer/Python_Develop/SEP/HomNayAnGi" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="source_backend" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="resource" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="HomNayAnGi" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="~/Developer/Python_Develop/SEP/HomNayAnGi" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="source_database" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
               <item name="HomNayAnGi" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
@@ -515,18 +504,17 @@
       <workItem from="1577521402992" duration="13000" />
       <workItem from="1577521437775" duration="32030000" />
       <workItem from="1578136314090" duration="693000" />
-      <workItem from="1578397251601" duration="11442000" />
+      <workItem from="1578397251601" duration="22019000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="89059000" />
+    <option name="totallyTimeSpent" value="99636000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="975" height="733" extended-state="0" />
-    <editor active="true" />
+    <frame x="0" y="23" width="597" height="733" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2357985" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.2357985" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -547,7 +535,7 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="SciView" order="3" />
-      <window_info anchor="right" id="Database" order="4" visible="true" weight="0.21972133" />
+      <window_info anchor="right" id="Database" order="4" weight="0.21972133" />
     </layout>
     <layout-to-restore>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.227224" />
@@ -582,27 +570,6 @@
     <SUITE FILE_PATH="coverage/HomNayAnGi$app__1_.coverage" NAME="app (1) Coverage Results" MODIFIED="1577010968957" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/source_backend" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/source_frontend/templates/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="25" selection-start-line="25" selection-end-line="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source_frontend/templates/signup.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="70" column="54" selection-start-line="70" selection-start-column="50" selection-end-line="70" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/lib/python3.7/site-packages/bcrypt/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="96" column="4" selection-start-line="96" selection-start-column="4" selection-end-line="96" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="uml://DATABASE/8a48ae49-4eaa-4778-ab48-5fef912805b4">
       <provider selected="true" editor-type-id="UmlEditorProvider">
         <state>
@@ -725,53 +692,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/source_react/src/Layout.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source_react/src/Nav.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-20">
-          <caret line="15" column="59" selection-start-line="15" selection-start-column="59" selection-end-line="15" selection-end-column="59" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/source_react/src/Log.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-4073">
           <caret line="35" selection-start-line="35" selection-end-line="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source_react/src/SignUp.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="516">
-          <caret line="43" column="51" selection-start-line="43" selection-start-column="51" selection-end-line="43" selection-end-column="51" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source_react/src/LogIn.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="78" column="80" selection-start-line="78" selection-start-column="80" selection-end-line="78" selection-end-column="80" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -802,25 +726,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://0eca5918-1640-4872-9fde-56eb6faa685b/database/postgres/schema/public/table/users">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state projectRestartId="1fcd7bf2-10ed-45d9-9845-9fd70fa4c9b7">
-          <filtering />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/source_react/src/data/data1.json">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
-          <caret line="54" column="36" selection-start-line="54" selection-start-column="36" selection-end-line="54" selection-end-column="36" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/source_backend/model/RecipeModel.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -856,20 +763,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/source_react/public/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="34" column="35" lean-forward="true" selection-start-line="34" selection-start-column="35" selection-end-line="34" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source_react/src/App.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="628">
-          <caret line="627" selection-start-line="627" selection-end-line="627" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/source_backend/model/UserModel.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="468">
@@ -887,19 +780,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://0eca5918-1640-4872-9fde-56eb6faa685b/database/postgres/schema/public/table/recipe_posts">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state projectRestartId="1fcd7bf2-10ed-45d9-9845-9fd70fa4c9b7">
-          <filtering>
-            <filter text="" />
-          </filtering>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.es5.d.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="217">
           <caret line="1360" column="4" selection-start-line="1360" selection-start-column="4" selection-end-line="1360" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source_react/src/SignUp.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="516">
+          <caret line="43" column="51" selection-start-line="43" selection-start-column="51" selection-end-line="43" selection-end-column="51" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source_react/src/LogIn.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="78" column="80" selection-start-line="78" selection-start-column="80" selection-end-line="78" selection-end-column="80" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -913,10 +817,101 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="7" column="24" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://0eca5918-1640-4872-9fde-56eb6faa685b/database/postgres/schema/public/table/recipe_posts">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state projectRestartId="1fcd7bf2-10ed-45d9-9845-9fd70fa4c9b7">
+          <filtering>
+            <filter text="" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="648">
+          <caret line="54" column="36" selection-start-line="54" selection-start-column="36" selection-end-line="54" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/homnayangi.ini">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database_config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source_react/src/App.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="628">
+          <caret line="643" column="1" selection-start-line="643" selection-start-column="1" selection-end-line="643" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source_react/public/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="348">
+          <caret line="29" column="33" selection-start-line="29" selection-start-column="33" selection-end-line="29" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source_react/src/Layout.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="33" column="22" selection-start-line="33" selection-start-column="22" selection-end-line="33" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source_react/src/Nav.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1044">
+          <caret line="87" column="19" selection-start-line="87" selection-start-column="19" selection-end-line="87" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source_react/src/searchResult.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="27" column="21" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://0eca5918-1640-4872-9fde-56eb6faa685b/database/postgres/schema/public/table/users">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state projectRestartId="1fcd7bf2-10ed-45d9-9845-9fd70fa4c9b7">
+          <filtering>
+            <filter text="" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/source_react/src/Home.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="277">
-          <caret line="123" column="12" selection-start-line="123" selection-start-column="12" selection-end-line="123" selection-end-column="12" />
+        <state relative-caret-position="408">
+          <caret line="104" column="33" selection-start-line="104" selection-start-column="33" selection-end-line="104" selection-end-column="33" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>

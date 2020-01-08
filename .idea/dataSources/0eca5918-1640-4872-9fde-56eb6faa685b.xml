@@ -14,7 +14,7 @@
       <Comment>default administrative connection database</Comment>
       <StateNumber>607</StateNumber>
       <Owner>ptsang</Owner>
-      <IntrospectionStateNumber>5405</IntrospectionStateNumber>
+      <IntrospectionStateNumber>5467</IntrospectionStateNumber>
       <Current>1</Current>
       <Visible>1</Visible>
       <Relations>sequence|table|16534|16536|1
@@ -164,7 +164,7 @@ default_transaction_read_only=off</Config>
       <Comment>standard public schema</Comment>
       <StateNumber>609</StateNumber>
       <Owner>ptsang</Owner>
-      <IntrospectionStateNumber>5406</IntrospectionStateNumber>
+      <IntrospectionStateNumber>5468</IntrospectionStateNumber>
       <Current>1</Current>
       <Visible>1</Visible>
     </schema>
