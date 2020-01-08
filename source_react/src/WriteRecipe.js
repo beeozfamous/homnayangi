@@ -121,7 +121,7 @@ class WriteRecipe extends React.Component {
         formData.append('description',resultStep.toString());
         formData.append('ingredients',resultIng.toString());
 
-        fetch("http://127.0.0.1:6969/addRecipe",
+        fetch("http://nguyenbm.tk:5000/addRecipe",
 {
     headers: {
         "access-control-allow-origin" : "*"},

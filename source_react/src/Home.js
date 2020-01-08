@@ -64,7 +64,7 @@ class Home extends Component {
   });
 
   componentDidMount() {
-    fetch('http://127.0.0.1:6969/listRecipe')
+    fetch('http://nguyenbm.tk:5000/listRecipe')
     .then(response => response.json())
     .then((json) => {
       this.setState({

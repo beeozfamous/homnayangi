@@ -46,7 +46,7 @@ formData.append('password',this.state.password);
   //   options.body.append("email","kienBTX@gmail.com");
   //   options.body.append("password","123456");
   //   console.log(options);
-fetch("http://127.0.0.1:6969/login",
+fetch("http://nguyenbm.tk:5000/login",
 {
     headers: {
         "access-control-allow-origin" : "*"},
