@@ -1,11 +1,14 @@
+import json
 import os
 import uuid
 
 import boto3 as boto3
 import werkzeug
+from flask import jsonify
 from flask_restful import Resource,reqparse
 from flask_jwt import jwt_required
 from source_backend.model.RecipeModel import RecipeModel
+from source_backend.model.UserModel import UserModel
 
 UPLOAD_FOLDER = "FoodImage"
 BUCKET = "hnag"
@@ -79,3 +82,6 @@ class Recipe(Resource):
 class RecipeList(Resource):
     def get(self):
         return{'recipes':[recipe.jsonify() for recipe in RecipeModel.query.all() ]}
+        # foodDetail = RecipeModel.query.join(UserModel,RecipeModel.ownerid==UserModel.userid).add_columns(RecipeModel.ownerid,UserModel.fullname).filter(RecipeModel.ownerid==UserModel.userid)
+        # print([jsonify(recipe) for recipe in foodDetail])
+        #return {'recipes':[dict((recipe)) for recipe in foodDetail]}

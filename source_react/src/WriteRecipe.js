@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import  { Redirect } from 'react-router-dom'
 
 class WriteRecipe extends React.Component {
     constructor(props) {
@@ -110,20 +111,23 @@ class WriteRecipe extends React.Component {
         let formData = new FormData();
         var resultStep = this.state.steps.map(function(a) {return a.name;});
         var resultIng = this.state.ingredients.map(function(a) {return a.name;});
+        console.log(resultStep.toString());
+        console.log(resultIng.toString());
 
 
         formData.append('owner_id', this.state.owner_id);
         formData.append('foodname',this.state.foodname);
         formData.append('image',this.state.file);
-        formData.append('description',JSON.stringify(resultStep));
-        formData.append('ingredients',JSON.stringify(resultIng));
+        formData.append('description',resultStep.toString());
+        formData.append('ingredients',resultIng.toString());
 
         fetch("http://127.0.0.1:6969/addRecipe",
 {
     headers: {
         "access-control-allow-origin" : "*"},
     method: 'POST',
-    body:formData
+    body:formData,
+    redirect: 'follow'
   })
      .then((response) => {
      return response.json();
@@ -133,12 +137,17 @@ class WriteRecipe extends React.Component {
         upRecipe:json
       });
     });
-console.log(this.state.upRecipe)
+console.log();
     }
 
     render() {
         let { imagePreviewUrl } = this.state;
         let $imagePreview = null;
+        if(this.state.upRecipe){
+            return (
+        <Redirect to='/'/>
+      )
+        }
         if (imagePreviewUrl) {
             $imagePreview = (<div className="uploadImg"  onChange={(e) => this._handleImageChange(e)}>
             <img src={imagePreviewUrl} /> 

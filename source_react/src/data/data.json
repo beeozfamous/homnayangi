@@ -1,0 +1,161 @@
+[
+        {
+             "post_id": 1,
+            "owner_id": "089786d0-294e-11ea-8671-3c15c2d9b720",
+            "food_name": "Lẩu",
+            "description": " Nấu, Dùng",
+            "ingredients": "Gồm một nồi nước dùng đang sôi, các món ăn sống được để xung quanh và người ăn gắp đồ ăn sống bỏ vào nồi nước dùng, đợi chín tới và ăn nóng ",
+            "image": "https://hnag.s3-ap-southeast-1.amazonaws.com/FoodImage/88aa9f26-3144-11ea-bdf6-3c15c2d9b720.jpg"      },
+        {
+            "post_id": 28,
+            "owner_id": "089786d0-294e-11ea-8671-3c15c2d9b720",
+            "food_name": "Cháo trắng",
+            "description": "[Nấu cháo,Bỏ tôm khô vào,Dùng]",
+            "ingredients": "[Cháo,Tôm khô,Chà bông]",
+            "image": "https://hnag.s3-ap-southeast-1.amazonaws.com/FoodImage/014cdfc0-3145-11ea-bdf6-3c15c2d9b720.jpg"
+        },
+        {
+            "post_id": 34,
+            "owner_id": "089786d0-294e-11ea-8671-3c15c2d9b720",
+            "food_name": "Xôi lá cẩm",
+            "description": "[Mua xôi,Ăn]",
+            "ingredients": "[Xôi ,Lá cẩm]",
+            "image": "https://hnag.s3-ap-southeast-1.amazonaws.com/FoodImage/896b25a6-3145-11ea-bdf6-3c15c2d9b720.jpg"
+        },
+        {
+            "post_id": 35,
+            "owner_id": "089786d0-294e-11ea-8671-3c15c2d9b720",
+            "food_name": "Xôi gấc",
+            "description": "[Nấu xôi,Dùng]",
+            "ingredients": "[Xôi,Gấc]",
+            "image": "https://hnag.s3-ap-southeast-1.amazonaws.com/FoodImage/cce765b0-3145-11ea-bdf6-3c15c2d9b720.jpg"
+        },
+        {
+            "post_id": 37,
+            "owner_id": "089786d0-294e-11ea-8671-3c15c2d9b720",
+            "food_name": "Cháo lòng",
+            "description": "[Nấu cháo với huyết,Thêm lòng heo]",
+            "ingredients": "[Cháo,Lòng lợn]",
+            "image": "https://hnag.s3-ap-southeast-1.amazonaws.com/FoodImage/ff9c3bca-3145-11ea-bdf6-3c15c2d9b720.jpg"
+        },
+        {
+            "post_id": 38,
+            "owner_id": "089786d0-294e-11ea-8671-3c15c2d9b720",
+            "food_name": "Xôi gà",
+            "description": "[Mua xôi,Ăn]",
+            "ingredients": "[Xôi,Gà]",
+            "image": "https://hnag.s3-ap-southeast-1.amazonaws.com/FoodImage/1b1deaba-3146-11ea-bdf6-3c15c2d9b720.jpg"
+        },
+        {
+            "post_id": 39,
+            "owner_id": "089786d0-294e-11ea-8671-3c15c2d9b720",
+            "food_name": "Xôi đỗ xanh",
+            "description": "[Mua,Dùng]",
+            "ingredients": "[Xôi ,Đậu xanh]",
+            "image": "https://hnag.s3-ap-southeast-1.amazonaws.com/FoodImage/4e912a4c-3146-11ea-bdf6-3c15c2d9b720.jpg"
+        },
+        {
+            "post_id": 40,
+            "owner_id": "089786d0-294e-11ea-8671-3c15c2d9b720",
+            "food_name": "Xôi chiên",
+            "description": "[Mua xôi,Đem về chiên lên]",
+            "ingredients": "[Xôi]",
+            "image": "https://hnag.s3-ap-southeast-1.amazonaws.com/FoodImage/692d77f2-3146-11ea-bdf6-3c15c2d9b720.jpg"
+        },
+        {
+            "post_id": 41,
+            "owner_id": "089786d0-294e-11ea-8671-3c15c2d9b720",
+            "food_name": "Rau muống xào tỏi",
+            "description": "[Xào rau chung với tỏi]",
+            "ingredients": "[Rau muốn non,Tỏi]",
+            "image": "https://hnag.s3-ap-southeast-1.amazonaws.com/FoodImage/95483f84-3146-11ea-bdf6-3c15c2d9b720.jpg"
+        },
+        {
+            "post_id": 42,
+            "owner_id": "089786d0-294e-11ea-8671-3c15c2d9b720",
+            "food_name": "Chả chiên",
+            "description": "[Bằm nhiễn thịt với da heo,Nướng tới chín]",
+            "ingredients": "[Thịt heo,Da heo]",
+            "image": "https://hnag.s3-ap-southeast-1.amazonaws.com/FoodImage/b9ff0b28-3146-11ea-bdf6-3c15c2d9b720.jpg"
+        },
+        {
+            "post_id": 43,
+            "owner_id": "089786d0-294e-11ea-8671-3c15c2d9b720",
+            "food_name": "Cá hú kho tộ",
+            "description": "[Bỏ cá,Bỏ nước đường,Kho tới chín]",
+            "ingredients": "[Cá hú,Nước đường thắng]",
+            "image": "https://hnag.s3-ap-southeast-1.amazonaws.com/FoodImage/da48621c-3146-11ea-bdf6-3c15c2d9b720.jpg"
+        },
+        {
+            "post_id": 44,
+            "owner_id": "089786d0-294e-11ea-8671-3c15c2d9b720",
+            "food_name": "Bún mộc Hà Nội",
+            "description": "[Mua,Ăn]",
+            "ingredients": "[Bún,Mộc?]",
+            "image": "https://hnag.s3-ap-southeast-1.amazonaws.com/FoodImage/f76316e4-3146-11ea-bdf6-3c15c2d9b720.jpg"
+        },
+        {
+            "post_id": 45,
+            "owner_id": "089786d0-294e-11ea-8671-3c15c2d9b720",
+            "food_name": "Bún mắm",
+            "description": "[Bún + Cá + Gia vị]",
+            "ingredients": "[Bún ,Cá,Mắm cá,Rau các loại]",
+            "image": "https://hnag.s3-ap-southeast-1.amazonaws.com/FoodImage/1eca5da0-3147-11ea-bdf6-3c15c2d9b720.jpg"
+        },
+        {
+            "post_id": 46,
+            "owner_id": "089786d0-294e-11ea-8671-3c15c2d9b720",
+            "food_name": "Bún đậu mắm tôm",
+            "description": "[Mua,Dùng,Quên đem tiền,Chạy]",
+            "ingredients": "[Bún trắng,Tàu hủ,Thịt heo luộc,Mắm tôm,Rau các loại]",
+            "image": "https://hnag.s3-ap-southeast-1.amazonaws.com/FoodImage/539af5f8-3147-11ea-bdf6-3c15c2d9b720.jpg"
+        },
+        {
+            "post_id": 47,
+            "owner_id": "089786d0-294e-11ea-8671-3c15c2d9b720",
+            "food_name": "Bún thịt nướng",
+            "description": "[Nướng thịt chín,Làm nước mắm ngon,Dùng chung với bún và rau]",
+            "ingredients": "[Bún,Thịt nướng,Rau với giá]",
+            "image": "https://hnag.s3-ap-southeast-1.amazonaws.com/FoodImage/7ece6f84-3147-11ea-bdf6-3c15c2d9b720.jpg"
+        },
+        {
+            "post_id": 48,
+            "owner_id": "089786d0-294e-11ea-8671-3c15c2d9b720",
+            "food_name": "Bún riêu cua",
+            "description": "[Mua về dùng thôi]",
+            "ingredients": "[Bún,Chả,Riêu cua,Rau]",
+            "image": "https://hnag.s3-ap-southeast-1.amazonaws.com/FoodImage/99b174a4-3147-11ea-bdf6-3c15c2d9b720.jpg"
+        },
+        {
+            "post_id": 49,
+            "owner_id": "089786d0-294e-11ea-8671-3c15c2d9b720",
+            "food_name": "Bún chả Đà Nẵng",
+            "description": "[Mua về mà dùng đi ăn thôi hong làm nên hong bít]",
+            "ingredients": "[Bún,Chả chiên,Rau các loại]",
+            "image": "https://hnag.s3-ap-southeast-1.amazonaws.com/FoodImage/ff65e7bc-3147-11ea-bdf6-3c15c2d9b720.jpg"
+        },
+        {
+            "post_id": 50,
+            "owner_id": "089786d0-294e-11ea-8671-3c15c2d9b720",
+            "food_name": "Bún bò huế",
+            "description": "[Phức tạp lắm với hong nấu chỉ mua ăn thôi mừ]",
+            "ingredients": "[Bò tái/nạm/gân/gầu,Tuỷ bò,Bún]",
+            "image": "https://hnag.s3-ap-southeast-1.amazonaws.com/FoodImage/52ee57fc-3148-11ea-bdf6-3c15c2d9b720.jpg"
+        },
+        {
+            "post_id": 51,
+            "owner_id": "089786d0-294e-11ea-8671-3c15c2d9b720",
+            "food_name": "Bánh đa cua",
+            "description": "[Muốn biết thêm thông tin liên hệ chủ quán 0357728803]",
+            "ingredients": "[Bánh đa,Cua,Chả,Rau các loại]",
+            "image": "https://hnag.s3-ap-southeast-1.amazonaws.com/FoodImage/76d766f4-3148-11ea-bdf6-3c15c2d9b720.jpg"
+        },
+        {
+            "post_id": 52,
+            "owner_id": "089786d0-294e-11ea-8671-3c15c2d9b720",
+            "food_name": "Bánh canh ",
+            "description": "[Hầm xương với củ cải,Thêm gia vị,Lấy tô bỏ bún vào,Thêm chả thịt và rau,Dùng thôi nè]",
+            "ingredients": "[Bánh bún,Thịt heo,Chả với rau thêm]",
+            "image": "https://hnag.s3-ap-southeast-1.amazonaws.com/FoodImage/b7e561aa-3148-11ea-bdf6-3c15c2d9b720.jpg"
+        }
+    ]

@@ -2,7 +2,37 @@ import React, { Component } from 'react';
 import Masonry from 'react-masonry-infinite';
 import shortid from 'shortid';
 import './App.css';
-import data from './data/data.json'
+
+class Popup extends React.Component {
+  render() {
+    return (
+      <div className='popup' >
+        <div className='popup_inner' >
+          <div className="row">
+            <img className="col" src={this.props.img.src}></img>
+            <div className="col detail">
+              <div className="closeBtn" onClick={this.props.closePopup}><i className="fa fa-times fa-3x"></i></div>
+              <h1>{this.props.name}</h1>
+              <h2>viết bởi: {this.props.username}</h2>
+              <div>
+                <p className="title">Nguyên liệu:</p>
+                <ul className="content">
+                  {this.props.ingredients.map((item, index) => <li key={index}>{item}</li>)}
+                </ul>
+              </div>
+              <div>
+                <p className="title">Các bước:</p>
+                <ul className="content">
+                  {this.props.steps.map((item, index) => <li key={index}>{item}</li>)}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+}
 
 class Home extends Component {
   constructor(props) {
@@ -11,32 +41,47 @@ class Home extends Component {
       hasMore: true,
       elements: [],
       load: true,
+      showPopUp: false,
+      dataPopUp: {},
+      listData:{}
     };
   }
-
-  // images = [require('./img/ct.jpg'), require('./img/gk.jpg'), require('./img/pz.jpg'), require('./img/bx.jpg'), require('./img/bb.jpg'), 'https://upload.wikimedia.org/wikipedia/commons/0/0a/OffHN_10_2008_1.jpg?fbclid=IwAR0yHttwqz_jilTzFJjWLQxNvUJvZzfnKevm6IsgDcMMAC6gR2rzKPNweWk'];
-
-  // getRandomElement = array => array[Math.floor(Math.random() * array.length)];
 
   generateElements = () => [...Array(10).keys()].map((item, index) => {
     const newImg = new Image()
     newImg.onload = () => {
     }
-    const imgs = data.map(item => item.img)
-    console.log(data[index])
-    newImg.src = imgs[index][0]
+    const imgs = this.state.listData.map(item => item.image);
+    newImg.src = imgs[index]
     return {
       key: shortid.generate(),
       img: newImg,
-      username: data[index].username,
-      content: data[index].name
+      username: this.state.listData[index].owner_id,
+      name: this.state.listData[index].food_name,
+      ingredients: this.state.listData[index].ingredients.split(","),
+      steps: this.state.listData[index].description.split(","),
     };
   });
 
-  componentWillMount() {
-    this.setState(state => ({
+  componentDidMount() {
+    fetch('http://127.0.0.1:6969/listRecipe')
+    .then(response => response.json())
+    .then((json) => {
+      this.setState({
+        listData:json.recipes
+      });
+      console.log(this.state.listData);
+       this.setState(state => ({
       elements: state.elements.concat(this.generateElements())
     }))
+
+    })
+    .catch(error => console.log('Error:', error));
+
+  }
+
+  componentWillMount() {
+
   }
 
   componentWillUnmount = () => {
@@ -49,8 +94,19 @@ class Home extends Component {
     elements: state.elements.concat(this.generateElements()),
   })), 2500);
 
+  clickLike = () => {
+
+  }
+
+  togglePopup = (key) => {
+    console.log(this.state.elements.filter(item => item.key === key)[0])
+    this.setState({
+      dataPopUp: this.state.elements.filter(item => item.key === key)[0],
+      showPopup: !this.state.showPopup
+    });
+  }
+
   render() {
-    console.log(this.state.elements[0].img.src)
     return (
       <div>
         <div className="container">
@@ -71,20 +127,32 @@ class Home extends Component {
               this.state.elements.map(item => (
                 <div key={item.key} className="post" style={{ height: `${item.img.height / item.img.width * 456.14 + 122}` }}>
                   <h2>{item.username}</h2>
-                  <img className="post-img" src={item.img.src} alt="" />
+                  <img className="post-img" src={item.img.src} alt="" onClick={() => this.togglePopup(item.key)} style={{ cursor: "pointer" }} />
                   <div className="post-body">
                     <ul className="post-react flex flex-wrap align-items-center">
-                      <li><i className="fa fa-heart-o fa-3x"></i></li>
+                      <li><i className="fa fa-heart-o fa-3x" onClick={this.clickLike}></i></li>
                       <li><i className="fa fa-comments-o fa-3x"></i></li>
                       <li><i className="fa fa-share-alt fa-3x"></i></li>
                     </ul>
-                    <h1 className="post-content">{item.content}</h1>
+                    <h1 className="post-content">{item.name}</h1>
                   </div>
                 </div>
               ))
             }
+
           </Masonry>) : null}
         </div>
+            {this.state.showPopup ?
+              <Popup
+                img={this.state.dataPopUp.img}
+                name={this.state.dataPopUp.name}
+                ingredients={this.state.dataPopUp.ingredients}
+                steps={this.state.dataPopUp.steps}
+                username={this.state.dataPopUp.username}
+                closePopup={this.togglePopup.bind(this)}
+              />
+              : null
+            }
       </div>
     );
   }

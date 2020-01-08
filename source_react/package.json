@@ -4,7 +4,7 @@
   "private": true,
   "homepage": "https://skoob13.github.io/react-masonry-infinite",
   "dependencies": {
-    "cors": "^2.8.5",
+    "d3": "^5.15.0",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-masonry-infinite": "^1.2.2",
